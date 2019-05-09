@@ -1,15 +1,27 @@
-########## Config Start ##########
+########## 基本配置 ##########
 server:
   address: 127.0.0.1
   port: 9090
 spring:
   application:
     name: spring-boot
+########## Dubbo 配置 ##########
 dubbo:
   application:
-    name:
-  reg
-
+    name: study-dubbo-springboot-provider
+  registry:
+    address: zookeeper://116.196.74.61:2181
+    timeout: 5000
+    check: false
+  protocols:
+    dubbo:
+      name: dubbo
+      port: 20880
+  provider:
+    timeout: 5000
+    retries: 0
+    dispatcher: message
+########## Log 配置 ##########
 logging:
   config: classpath:logback.xml
-########## Config End ##########
+

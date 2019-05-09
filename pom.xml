@@ -21,12 +21,25 @@
             <artifactId>junit</artifactId>
             <version>4.12</version>
         </dependency>
-        <!-- ================ -->
-        <!--    Spring Boot   -->
-        <!-- ================ -->
+        <!-- ==================== -->
+        <!-- Spring Boot          -->
+        <!-- ==================== -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo-spring-boot-starter</artifactId>
+            <version>2.7.1</version>
+        </dependency>
+        <!-- ==================== -->
+        <!-- Dubbo                -->
+        <!-- ==================== -->
+        <dependency>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo</artifactId>
+            <version>2.7.1</version>
         </dependency>
 
         <!--<dependency>-->
