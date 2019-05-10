@@ -20,7 +20,6 @@ dubbo:
     http:
       name: http
       port: 8080
-      server: tomcat
   provider:
     timeout: 5000
     retries: 0
