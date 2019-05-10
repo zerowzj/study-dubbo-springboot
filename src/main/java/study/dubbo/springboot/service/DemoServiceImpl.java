@@ -9,7 +9,6 @@ import study.dubbo.service.DemoService;
 
 import java.util.Map;
 
-@Component
 @Service
 public class DemoServiceImpl implements DemoService {
 

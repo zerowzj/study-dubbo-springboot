@@ -16,8 +16,9 @@ public class DispatcherServletCfg {
 
     @Bean
     public ServletRegistrationBean backServlet() {
-
-        LOGGER.info("SSSSSSSSSSSSSSSSSSS");
+        LOGGER.info("********************");
+        LOGGER.info("DispatcherServletCfg");
+        LOGGER.info("********************");
 
         DispatcherServlet dispatcherServlet = new DispatcherServlet();
         ServletRegistrationBean registrationBean = new ServletRegistrationBean();
