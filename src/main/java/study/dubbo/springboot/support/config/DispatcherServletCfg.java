@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Configuration;
 import java.util.Arrays;
 
 @Configuration
-public class DispatcherServletCfg {
+public class DispatcherServlProtocolConfigetCfg {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(DispatcherServletCfg.class);
 
