@@ -16,13 +16,11 @@ dubbo:
     timeout: 5000
     check: false
   protocols:
-    dubbo:
-      name: dubbo
-      port: 20880
     http:
       name: http
       port: 8080
-      server: jetty
+      server: servlet
+      contextpath: /
   provider:
     timeout: 5000
     retries: 0
