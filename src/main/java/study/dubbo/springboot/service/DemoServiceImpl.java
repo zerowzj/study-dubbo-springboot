@@ -4,11 +4,13 @@ import com.google.common.collect.Maps;
 import org.apache.dubbo.config.annotation.Service;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
 import study.dubbo.service.DemoService;
 
 import java.util.Map;
 
-@Service(version = "1.0.0")
+@Component
+@Service
 public class DemoServiceImpl implements DemoService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(DemoServiceImpl.class);

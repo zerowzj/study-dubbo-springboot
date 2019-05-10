@@ -4,7 +4,9 @@ server:
   port: 8080
 spring:
   application:
-    name: spring-boot
+    name: study-dubbo-springboot
+  main:
+    web-application-type: servlet
 ########## Dubbo 配置 ##########
 dubbo:
   application:
@@ -20,10 +22,12 @@ dubbo:
     http:
       name: http
       port: 8080
+      server: jetty
   provider:
     timeout: 5000
     retries: 0
     dispatcher: message
+    version: 1.0.0
   scan:
     base-packages: study.dubbo.springboot.service
 ########## Log 配置 ##########

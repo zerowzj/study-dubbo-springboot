@@ -18,6 +18,7 @@ import java.util.Arrays;
  * @author wangzhj
  */
 @SpringBootApplication
+@EnableAutoConfiguration
 public class Startup {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(Startup.class);
