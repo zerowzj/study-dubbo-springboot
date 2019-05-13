@@ -15,8 +15,7 @@ import java.util.Map;
 
 @Path("/demo")
 @Produces({MediaType.APPLICATION_JSON})
-//@Component
-@Service(interfaceName = "study.dubbo.service.DemoService", version = "1.0.0")
+@Service(version = "1.0.0")
 public class DemoServiceImpl implements DemoService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(DemoServiceImpl.class);
@@ -47,6 +46,7 @@ public class DemoServiceImpl implements DemoService {
 //        if ("".equals("")) {
 //            throw new IllegalArgumentException("非法参数异常");
 //        }
+        LOGGER.info("SFSAFDAFDS111111111111111");
         return data;
     }
 }

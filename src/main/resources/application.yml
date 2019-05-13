@@ -1,36 +1,36 @@
-########## 基本配置 ##########
+########## Server ##########
 server:
   address: 127.0.0.1
-  port: 8081
+  port: 8080
+########## Spring ##########
 spring:
   application:
     name: study-dubbo-springboot
   main:
-    web-application-type: servlet
-########## Dubbo配置 ##########
-#dubbo:
-#  application:
-#    name: study-dubbo-springboot-provider
-#  registry:
-#    address: zookeeper://116.196.74.61:2181
-#    timeout: 5000
-#    check: false
-#  protocols:
-#    dubbo:
-#      name: dubbo
-#      port: 20880
-##    rest:
-##      name: rest
-##      port: 8080
-##      server: tomcat
-#  provider:
-#    timeout: 5000
-#    retries: 0
-#    dispatcher: message
-#    version: 1.0.0
-#  scan:
-#    base-packages: study.dubbo.springboot.service
-########## Log配置 ##########
+    web-application-type: none
+########## Log ##########
 logging:
   config: classpath:logback.xml
-
+########## Dubbo ##########
+dubbo:
+  application:
+    name: study-dubbo-springboot-provider
+  registry:
+    address: zookeeper://116.196.74.61:2181
+    timeout: 5000
+    check: false
+  protocols:
+    dubbo:
+      name: dubbo
+      port: 20880
+    rest:
+      name: rest
+      port: 8081
+      server: tomcat
+  provider:
+    timeout: 5000
+    retries: 0
+    dispatcher: message
+    version: 1.0.0
+  scan:
+    base-packages: study.dubbo.springboot.service
