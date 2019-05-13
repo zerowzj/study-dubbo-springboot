@@ -22,7 +22,7 @@ dubbo:
     rest:
       name: rest
       port: 8080
-      server: jetty
+      server: tomcat
   provider:
     timeout: 5000
     retries: 0
