@@ -12,13 +12,13 @@ import java.util.Arrays;
 /**
  *
  */
-@Configuration
+//@Configuration
 public class DispatcherServletCfg {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(DispatcherServletCfg.class);
 
     @Bean
-    public ServletRegistrationBean backServlet() {
+    public ServletRegistrationBean dispatcherServlet() {
         LOGGER.info("********************");
         LOGGER.info("DispatcherServletCfg");
         LOGGER.info("********************");
