@@ -4,6 +4,7 @@ import com.google.common.collect.Maps;
 import org.apache.dubbo.config.annotation.Service;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
 import study.dubbo.service.DemoService;
 
 import javax.ws.rs.GET;
@@ -14,7 +15,8 @@ import java.util.Map;
 
 @Path("/demo")
 @Produces({MediaType.APPLICATION_JSON})
-@Service
+//@Component
+@Service(interfaceName = "study.dubbo.service.DemoService", version = "1.0.0")
 public class DemoServiceImpl implements DemoService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(DemoServiceImpl.class);
@@ -42,9 +44,9 @@ public class DemoServiceImpl implements DemoService {
         Map<String, Object> data = Maps.newHashMap();
         data.put("name", "wangzhj");
         data.put("age", 36);
-        if ("".equals("")) {
-            throw new IllegalArgumentException("非法参数异常");
-        }
+//        if ("".equals("")) {
+//            throw new IllegalArgumentException("非法参数异常");
+//        }
         return data;
     }
 }

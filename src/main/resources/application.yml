@@ -1,7 +1,7 @@
 ########## 基本配置 ##########
 server:
   address: 127.0.0.1
-  port: 8080
+  port: 8081
 spring:
   application:
     name: study-dubbo-springboot
@@ -19,10 +19,10 @@ dubbo:
     dubbo:
       name: dubbo
       port: 20880
-    rest:
-      name: rest
-      port: 8080
-      server: tomcat
+#    rest:
+#      name: rest
+#      port: 8080
+#      server: tomcat
   provider:
     timeout: 5000
     retries: 0
