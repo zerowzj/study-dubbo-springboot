@@ -43,9 +43,9 @@ public class DemoServiceImpl implements DemoService {
         Map<String, Object> data = Maps.newHashMap();
         data.put("name", "wangzhj");
         data.put("age", 36);
-//        if ("".equals("")) {
-//            throw new IllegalArgumentException("非法参数异常");
-//        }
+        if ("".equals("")) {
+            throw new IllegalArgumentException("非法参数异常");
+        }
         LOGGER.info("SFSAFDAFDS111111111111111");
         return data;
     }

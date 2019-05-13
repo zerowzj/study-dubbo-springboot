@@ -45,12 +45,13 @@ public class WatchDogFilter implements Filter {
         try {
             result = invoker.invoke(invocation);
         } catch (Exception ex) {
-//            ex.printStackTrace();
+            ex.printStackTrace();
             Map<String, Object> data = Maps.newHashMap();
             data.put("code", "9999");
             data.put("desc", "异常");
             ((RpcResult) result).setValue(data);
-            return result;
+//            return result;
+//            throw ex;
         } finally {
             LOGGER.info("[{}] [COST TIME {}ms]", fullMethod, watch.elapsed(TimeUnit.MILLISECONDS));
         }

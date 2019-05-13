@@ -27,6 +27,9 @@ dubbo:
       name: rest
       port: 8081
       server: tomcat
+      extension: study.dubbo.springboot.support.rest.RestContainerFilter,
+                 study.dubbo.springboot.support.rest.RestWriterInterceptor,
+                 study.dubbo.springboot.support.rest.RestExceptionMapper
   provider:
     timeout: 5000
     retries: 0

@@ -21,8 +21,8 @@ public class RestExceptionMapper implements ExceptionMapper<Exception> {
         data.put("code", "9999");
         data.put("desc", "系统异常");
         return Response.status(200)
-                .entity("sssssssssssssssssss")
-                .type(MediaType.TEXT_PLAIN_TYPE)
+                .entity(data)
+                .type(MediaType.APPLICATION_JSON_TYPE)
                 .build();
     }
 }

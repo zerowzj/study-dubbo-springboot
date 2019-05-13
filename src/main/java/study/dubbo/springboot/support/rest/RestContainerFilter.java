@@ -28,7 +28,7 @@ import java.io.IOException;
 //@Provider
 //@PreMatching
 public class RestContainerFilter implements ContainerRequestFilter,
-        ContainerResponseFilter, WriterInterceptor {
+        ContainerResponseFilter {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(RestContainerFilter.class);
 
@@ -67,10 +67,5 @@ public class RestContainerFilter implements ContainerRequestFilter,
         } finally {
 
         }
-    }
-
-    @Override
-    public void aroundWriteTo(WriterInterceptorContext cxt) throws IOException, WebApplicationException {
-
     }
 }
