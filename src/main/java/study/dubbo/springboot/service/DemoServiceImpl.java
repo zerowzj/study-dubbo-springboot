@@ -4,10 +4,12 @@ import com.google.common.collect.Maps;
 import org.apache.dubbo.config.annotation.Service;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import study.dubbo.service.DemoService;
 
 import javax.ws.rs.GET;
+import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
@@ -37,7 +39,7 @@ public class DemoServiceImpl implements DemoService {
         LOGGER.info("bye bye...");
     }
 
-    @GET
+    @POST
     @Path("/say_hii")
     public Map<String, Object> sayHii() {
         Map<String, Object> data = Maps.newHashMap();

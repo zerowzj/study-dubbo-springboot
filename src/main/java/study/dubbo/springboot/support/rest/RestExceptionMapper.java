@@ -18,8 +18,8 @@ public class RestExceptionMapper implements ExceptionMapper<Exception> {
         ex.printStackTrace();
         LOGGER.info("exception11111111111111111111111111");
         Map<String, Object> data = Maps.newHashMap();
-        data.put("code", "9999");
-        data.put("desc", "系统异常");
+        data.put("code", "9999999");
+        data.put("desc", "系统异常1111");
         return Response.status(200)
                 .entity(data)
                 .type(MediaType.APPLICATION_JSON_TYPE)

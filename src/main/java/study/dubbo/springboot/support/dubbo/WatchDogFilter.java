@@ -48,7 +48,7 @@ public class WatchDogFilter implements Filter {
 //            ex.printStackTrace();
             Map<String, Object> data = Maps.newHashMap();
             data.put("code", "9999");
-            data.put("desc", "异常");
+            data.put("desc", ex.getMessage());
             ((RpcResult) result).setValue(data);
 //            return result;
 //            throw ex;
