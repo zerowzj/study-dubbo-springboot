@@ -45,7 +45,7 @@ public class WatchDogFilter implements Filter {
         try {
             result = invoker.invoke(invocation);
         } catch (Exception ex) {
-            ex.printStackTrace();
+//            ex.printStackTrace();
             Map<String, Object> data = Maps.newHashMap();
             data.put("code", "9999");
             data.put("desc", "异常");
