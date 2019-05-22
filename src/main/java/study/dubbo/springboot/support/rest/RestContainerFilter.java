@@ -27,8 +27,7 @@ import java.io.IOException;
 //@Activate
 //@Provider
 //@PreMatching
-public class RestContainerFilter implements ContainerRequestFilter,
-        ContainerResponseFilter {
+public class RestContainerFilter implements ContainerRequestFilter, ContainerResponseFilter {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(RestContainerFilter.class);
 

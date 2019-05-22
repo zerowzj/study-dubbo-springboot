@@ -21,7 +21,7 @@ public class Startup {
         new SpringApplicationBuilder(Startup.class)
                 .bannerMode(Banner.Mode.OFF)
                 .run(args);
-        LOGGER.info("SFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF");
+        LOGGER.info("ok......");
     }
 }
 
