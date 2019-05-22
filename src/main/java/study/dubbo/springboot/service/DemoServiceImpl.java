@@ -46,7 +46,7 @@ public class DemoServiceImpl implements DemoService {
         data.put("name", "wangzhj");
         data.put("age", 36);
         if ("".equals("")) {
-            throw new IllegalArgumentException("非法参数异常");
+            throw new IllegalArgumentException("非法参数异常11111111111111");
         }
         LOGGER.info("SFSAFDAFDS111111111111111");
         return data;

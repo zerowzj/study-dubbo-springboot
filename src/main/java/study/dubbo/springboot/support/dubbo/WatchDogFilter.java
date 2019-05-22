@@ -31,7 +31,6 @@ public class WatchDogFilter implements Filter {
     @Override
     public Result invoke(Invoker<?> invoker,
                          Invocation invocation) throws RpcException {
-        //
         LOGGER.info("i am watch dog");
         Stopwatch watch = Stopwatch.createStarted();
         //
@@ -41,17 +40,28 @@ public class WatchDogFilter implements Filter {
         URL url = invoker.getUrl();
         LOGGER.info("url={}", url);
         //
-        Result result = null;
+        Result result;
         try {
             result = invoker.invoke(invocation);
-        } catch (Exception ex) {
-//            ex.printStackTrace();
-            Map<String, Object> data = Maps.newHashMap();
-            data.put("code", "9999");
-            data.put("desc", ex.getMessage());
-            ((RpcResult) result).setValue(data);
-//            return result;
-//            throw ex;
+            //异常
+            LOGGER.info("has_exception= {}", result.hasException());
+            //返回值
+            Object value = result.getValue();
+//            LOGGER.info("value class= {}", value.getClass().getSimpleName());
+            //
+            if (result.hasException()) {
+                Map<String, Object> data = Maps.newHashMap();
+                data.put("code", "9999");
+                data.put("desc", result.getException().getMessage());
+                RpcResult rpcResult = (RpcResult) result;
+                //调用端不抛异常
+                rpcResult.setException(null);
+                rpcResult.setValue(data);
+                return rpcResult;
+            }
+        } catch (RpcException ex) {
+            ex.printStackTrace();
+            throw ex;
         } finally {
             LOGGER.info("[{}] [COST TIME {}ms]", fullMethod, watch.elapsed(TimeUnit.MILLISECONDS));
         }
