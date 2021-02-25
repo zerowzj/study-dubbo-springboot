@@ -7,21 +7,13 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 
-/**
- * 入口
- *
- * @author wangzhj
- */
 @SpringBootApplication
 public class Startup {
-
-    private static final Logger LOGGER = LoggerFactory.getLogger(Startup.class);
 
     public static void main(String[] args) {
         new SpringApplicationBuilder(Startup.class)
                 .bannerMode(Banner.Mode.OFF)
                 .run(args);
-        LOGGER.info("ok......");
     }
 }
 

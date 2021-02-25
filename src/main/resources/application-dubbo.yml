@@ -1,0 +1,26 @@
+#
+dubbo:
+  application:
+    name: study-dubbo-springboot
+  registry:
+    address: zookeeper://116.196.74.61:2181
+    timeout: 5000
+    check: false
+  protocols:
+    dubbo:
+      name: dubbo
+      port: 20880
+    rest:
+      name: rest
+      port: 8081
+      server: tomcat
+      extension: study.dubbo.springboot.support.rest.RestContainerFilter,
+                 study.dubbo.springboot.support.rest.RestWriterInterceptor,
+                 study.dubbo.springboot.support.rest.RestExceptionMapper
+  provider:
+    timeout: 5000
+    retries: 0
+    dispatcher: message
+    version: 1.0.0
+  scan:
+    base-packages: study.dubbo.springboot.service
