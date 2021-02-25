@@ -1,6 +1,5 @@
 #
 server:
-  address: 127.0.0.1
   port: 8080
 #
 logging:
@@ -11,3 +10,5 @@ spring:
     name: study-dubbo-springboot
   main:
     web-application-type: none
+  profiles:
+    active: dubbo, @env@

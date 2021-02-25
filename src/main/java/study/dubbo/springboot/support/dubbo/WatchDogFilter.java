@@ -18,11 +18,6 @@ import org.slf4j.LoggerFactory;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
-/**
- * 看门狗过滤器
- *
- * @author wangzhj
- */
 @Activate(group = Constants.PROVIDER, order = 1)
 public class WatchDogFilter implements Filter {
 
