@@ -1,11 +1,13 @@
 #
 dubbo:
   application:
-    name: study-dubbo-springboot
+    name: ${spring.application.name}
+  #（★）注册中心
   registry:
     address: zookeeper://116.196.74.61:2181
     timeout: 5000
     check: false
+  #（★）通信协议
   protocols:
     dubbo:
       name: dubbo
@@ -17,10 +19,12 @@ dubbo:
       extension: study.dubbo.springboot.support.rest.RestContainerFilter,
                  study.dubbo.springboot.support.rest.RestWriterInterceptor,
                  study.dubbo.springboot.support.rest.RestExceptionMapper
+  #（★）
   provider:
     timeout: 5000
     retries: 0
     dispatcher: message
     version: 1.0.0
+  #（★）
   scan:
     base-packages: study.dubbo.springboot.service
